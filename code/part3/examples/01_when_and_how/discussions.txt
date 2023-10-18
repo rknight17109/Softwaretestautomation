@@ -1,0 +1,113 @@
+Typically we write a class, put some fields in it, add some 
+getter/setters as we think is necessary, we write some functions / methods, and then we think of writing tests.
+
+We do not gain the design benefits of TDD in this case.
+
+Unit test may be written before or after writing code. However, if we
+write test after, we often are trying to work with the design that we
+have thrown together.
+
+If we write test first, we get put ourselves in the shoes of the person who will use our code when competed. We are able to create a better,
+empathetic design in this case.
+
+Test first development.
+
+We can ask does this make sense, is this easier to use, can this be
+simpler and better, even before we set out to write minimalistic code.
+
+We can influence the design of the code if we write test first.
+
+If we write test after, and if we find it hard to write some tests,
+because the design does not make it easier to write the tests, 
+we may give up on writing those tests.
+
+Write a test
+Then write minimum code to make the test pass
+Refactor
+
+But, writing tests is *not* a mechanical process.
+
+Write a test
+*** Stare at it. Does it make sense. Is this good. What is the test telling us. Rework the test until you feel this is good.
+Then write minimum code to make the test pass
+Refactor
+
+Listen to the test after you write it.
+
+To me, it is write test, tweak it, tweak it, tweak it, until it feel that the design if the code we are about to write is simple and minimalistic.
+
+The influence of TDD on design is not automatic. It takes deliberate
+effort and also being really alert.
+
+The person who is going to write the codes should be writing the tests.
+
+Think of walking from point A to point B. You want to take one step
+at a time and not bounce around like a drunkard.
+
+Right foot first
+Left foot next
+
+Likewise,
+one test
+minimum code to make the test past
+refactor
+one test
+minimum code to make the test past
+refactor
+refactor
+...
+
+You need a good rhythm to write test and code as you move forward.
+
+Let the tests tell you a story of how you are incrementally evolving the design in code.
+
+Write tests at one layer below the GUI. This can help you to get fast
+feedback and tests are less brittle as well.
+
+It also helps us to separate the GUI from the logic.
+
+Michael Features says in Working Effectively with Legacy Code, "legacy code is a piece of code you wrote with no tests"
+
+The first step in dealing with legacy code is to put an end to legacy code becoming older and bigger.
+
+How do you put an end to growing legacy code. Start writing tests for
+any new code you are writing on that product.
+
+Do *not* start writing unit tests randomly or with vengeance on existing
+code. The unit tests are not very effective when we write them without
+specific intent and objective. 
+
+If no one has been updating a legacy code, do not bother writing tests.
+If something has not changed in a while and there is no plan to touch it, leave it alone, don't write any tests.
+
+If we have a legacy code that needs bug fixing, a feature enhancement, or
+we plan to make extensive change in the near future, then and only the
+take a look at it. First write unit tests if possible. If not, write automated integration tests if possible. If that is not also possible, then write manual integration tests. Make sure, any of these tests forms, tests truly very the code about to be refactored. Then refactor, make sure 
+all the tests are passing.
+
+Do not refactor code with no tests at all (including unit tests, 
+automated integration tests, and manual integration tests)
+
+Feedbacks from tests are critical. Tests are safety net for refactoring.
+
+How do we approach the design and testing when we start with requirements?
+
+Divide the design into two parts:
+Strategic design
+Tactical design
+
+Strategic design
+Very high level design. Jot down classes, some top level functions, etc.
+Keep in mind these are details that can, should, and will change.
+
+This gives us a starting point, but we should be willing to change based on what we learn along the way.
+
+Tactical design
+Here start with the most interesting or the most valuable part of the strategic design. Drive the design using automated tests. As you learn more,
+as you evolve the design, change the strategic design to match the current understanding.
+
+
+
+
+
+
