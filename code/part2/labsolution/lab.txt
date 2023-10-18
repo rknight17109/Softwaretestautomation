@@ -1,0 +1,72 @@
+1. We are designing a class and decide we want a field and a getter and setter for it. Should we write a unit test before writing the getter and before writing a setter?
+
+No.
+
+Focus on a behavior instead of state. Getter and setters focus on state.
+
+But, what about code coverage?
+
+If we bring in getters and setters only when we implement some logic
+which is designed using tests, then the getters and setters will have
+100% coverage.
+
+2. We're designing a function that performs an action, sleeps for one second and then performs another action. How should we approach writing a unit test for it?
+
+This function is not a unit, it can be broken down to smaller functions
+that can be unit tested.
+
+From the design point of view, most likely, we are violating the
+SLAP - Single Level of Abstraction Principle. By using the compose
+method pattern we can make the given function more maintainable and
+deleagte parts of the code to smaller, more cohesive functions.
+
+A compose method pattern says that a function should have instructions
+that are composed at a single level of detail and not have instructions
+that go across multiple levels of details.
+
+Make breakfast
+take a slice of bread
+Toss into the toaster
+while that is happening get peanut butter
+...
+take a glass
+pour orange juice
+...
+Slice some fresh fruite
+...
+
+Make breakfast (compose method pattern)
+ make a toast
+ prepare juice
+ get some fresh fruit
+ 
+make a toast
+ ...bread...
+ ...toaster...
+
+The more mocks and stubs we use is a sign of poor design. Minimize
+mocking and stubbing as much as you possibly can.
+
+3. We're designing a function that makes a call to a remote webservice, performs one set of action if the result of the call is in a range and a different set of action if the result of the call is out side of that range. How should we approach writing a unit test for it?
+
+...
+result = call to a service
+if(result in range) {
+ ...
+} else {
+ ...
+}
+...
+
+Assume in this case that the if and the else part are not significant
+enough to stand alone and there is enough to be done before the
+service call and after the if.
+
+Option 1: may be break into smaller function, but...
+
+Use Dependency Injection. Use a stub to stand in for the service.
+Also consider, if the action is complex or extensive then
+break that into a separate function, not otherwise.
+
+Test 1 with a stub to return value in the range
+Test 2 with a stub to return value outside of the range
