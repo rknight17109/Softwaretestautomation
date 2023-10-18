@@ -1,0 +1,204 @@
+Agile development is really feedback driven development
+
+Agile development is *not* about speed.
+
+It is really about sustainable speed.
+
+It is sometimes very important to slow down in order to gain sustainable speed in the long term.
+
+https://twitter.com/venkat_s/status/939166889779003393
+
+I do automated testing not because I have a lot of time, it’s because I don’t.
+
+You don't want to build what your customers wanted. You want to build
+what they still want.
+
+There are two cycles of feedback:
+1. That the code meets the customers' or business' expectations
+  circle of relevance
+
+2. The code worked yesterday, does it still work now after the changes
+we recently made?
+  circle of regression
+
+Software is a non-linear system
+
+https://twitter.com/venkat_s/status/1710272036554088449
+
+A change in one place may drastically affect a very different place
+in the application.
+
+We constantly evolve the design to accommodate change in requirements
+
+How do we know if the design is not brittle and it is easier to change?
+
+How do we know that a change does not break the current expectations
+and behavior of the code?
+
+I love manual testing
+
+But, what is testing?
+
+Testing is an act of gaining insight into the application we are
+designing. Does this feel right? Is this usable? Is this easy and
+intuitive for the users? Is the workflow necessary and is it simple
+for the users? Can it be better, can it be simpler, is the performance
+adequate? ...
+
+We use the word testing too broadly and often in an incorrect manner.
+
+If we ask "the code worked yesterday and does it still work as expected
+after the recent change" - This is *not* testing even though we call it
+testing.
+
+It is an act of __verification__.
+
+Test manually, but verify automated.
+
+Do not do manual verification. 
+
+Automated verification truly gives you the agility you strive for.
+
+Even though we call it automated testing (because many have done so
+over the years, it really is automated verification.
+
+Unit testing is really automated verification
+
+Why not do manual verification?
+
+AF: Saves time and provides instant feedback
+
+If we implement 4 user stories in sprint 1
+We may need, let us say, 2 days to fully test/verify it manually.
+
+In the next sprint, we implement 4 more user stories.
+How much time do we need to fully test/verify during this sprint?
+
+May be 4 days since we have to really make sure all the 8 stories
+are working well.
+
+Remember that software is a non-linear system. We have to make sure
+that changes and the new additions did not break anything that we
+already had in place.
+
+Now, with each added sprint, each added story, we need more and more
+time to verify manually.
+
+At some point, we may need weeks. That is not possible to accommodate
+within the time for a sprint. So, we may say, go on, write some
+code, we will test when things are done - we will have a code freeze
+and test that everything still works as expected. We will give you time
+to fix bugs at that point. This leads to ___waterfall___ development
+
+It is how agile development becomes waterfall development while we
+are in denial. We celebrate that it is agile, when in reality it
+is really far from that.
+
+A lot of organizations do what I like to call as "Agile by convenience"
+they follow the rituals but shy away from the rigor that helps to truly
+achieve sustainable development.
+
+Automated testing (verification) is about feedback. You want to rely
+on the feedback loops to know that things are working and continue
+to work as expected. Also, to know that we can accommodate changes
+without going though expensive and time consuming changes to the code.
+
+Automated unit tests
+Functional tests
+Acceptance tests
+Integration tests
+...
+
+Automated unit tests have two benefits:
+1. Regression benefits
+2. Design benefits
+
+Regression benefits is the long term power of automated unit tests.
+
+If things fall apart, we want to know that right away.
+
+The cost of fixing increases with time between writing the code and
+finding the error.
+
+Quick feedback loops are essential.
+
+"Unit tests are angel on your shoulder"
+
+I would rather hear from my unit tests that my code sucks that from
+my colleagues and customers.
+
+If we automate a lot of tests at the GUI level, the tests become
+brittle, they become slow to run, hard to maintain.
+
+Think of this as the ice cream cone anti-pattern vs. test pyramid
+
+Where should the test go?
+
+We want to do more tests/verification at the lower levels and
+fewer (but not zero) verification at the higher levels.
+
+Instead of doing more tests at the GUI, push tests to lower levels
+as much as possible.
+
+Write tests at the lowest level that is possible, closer to where
+the relevant code is present. Ask where the code should be in order
+to facilitate easier maintenance, extensibility, and testing.
+
+Even in the frontend we have multiple levels (html, controller, 
+components, service, etc.) and the tests should close to the level 
+where the code resides.
+
+One of the problems with using TDD is it is a still. Like any skill,
+we need to take the time to get better at it. We are often terrible
+with things in the beginning but we get better with practice.
+
+Remember the time you learned to 
+ride a bike
+drive a car
+to ski
+to play music
+to code
+to cook
+...
+
+TDD is a skill, it takes practice to get better.
+
+Productivity myth
+
+             --------
+            / 
+           / 
+          / 
+         / 
+---------
+
+time -> 
+
+As we adopt a practice we gain productivity - not really.
+
+Productivity reality
+
+                                     --------
+                                    / 
+                                   / 
+                                  / 
+                                 / 
+---------                       /
+         \                     /
+          \                   /
+           \                 /
+            \----------------
+            ^
+            |
+	    Panic and give yup (unless we are determined to stay
+	    the course and have the support of the team/organization)
+
+
+Automated unit testing is the software equivalent of exercising
+
+Most will agree these are good, but often do not prioritize and
+lack the discipline to follow regularly.
+
+For us to embrace the ideas of TDD, we really need discipline, 
+commitment, and dedicated.
+
