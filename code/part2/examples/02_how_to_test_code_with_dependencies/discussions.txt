@@ -1,0 +1,22 @@
+
+
+message queue ---> processing ----> database
+
+In order to test the processing we have to rely on the queue, set it up,
+and rely on the database...
+
+Also, from the design point of view, this make it hard to extend.
+
+
+input data --> processing -> output data
+
+The processing function just became a pure function. It does not
+read from a queue, the data can come from anywhere. It does not
+depend on a database, the data can go anywhere. Extensible.
+
+Now we can easily unit test the processing function now than we 
+had it before decoupling. 
+
+Dependency Inversion Principle or Inversion of Control
+
+
