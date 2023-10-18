@@ -1,0 +1,115 @@
+Types of tests:
+White box testing
+Black box testing
+
+White box testing is where the person writing the tests knows about the
+implementation of the code and is interested in helping with the design
+of the code. The knowing the implementation is less important that
+influencing the design. Unit tests.
+
+Black box testing is where the person writing the tests does not know
+of or care about the implementation of the code that is being tested
+but is interested in what the code should do, its external behavior.
+Functional tests, acceptance tests, integration tests.
+
+Types of Unit tests:
+
+1. Positive tests - does the code do what it is suppose to do?
+I deposit $50 did the balance go up by $50 and ...
+
+2. Negative tests - does the code handle its invariants properly and
+take care of properly dealing with operations that are not allowed.
+
+3. Exception tests - does the code properly deal with exceptions,
+both raising them and handling them.
+
+Testability is really a design concern.
+
+A code that is poorly design is often hard to to test.
+
+If performance is important then do not write any code for it until
+you have tests for checking performance.
+
+Start with performance tests before tweaking code for performance.
+
+What is a unit test?
+
+It is a test on a unit of code.
+
+What is a unit of code?
+
+A unit of code is a smallest piece of code that does useful work.
+
+If a function does a lot of work, very complex logic and looping,
+event management, etc. then it is not a unit of code. It can be
+divided into smaller functions that may be considered as units
+of code. The larger functions benefit from higher level testing than
+unit tests.
+
+Suppose you have a piece of code that performs tax computations.
+Should we write unit tests for it?
+
+If that is small enough, certainly yes.
+
+Suppose we are writing a class and decide we want to add a getter
+and a setter. Should we write a unit test for the getter and the setter?
+
+Getters and setters typically are very small, but also useless.
+
+NO, do not write unit tests for getter and setters. In fact, do not
+write getters and setters, until a unit test fails for some other 
+code being designed and as part of writing that code, you needed
+a getter and/or a setter and write them at that point but not
+separately.
+
+test -> some code ---> needs getter/setter - implement when needed not
+separately.
+
+Test quality:
+A unit test should focus on one small expected behavior that you are
+about to implement.
+
+Focus on behavior rather than on state.
+
+Rather than asking what does this class have, ask what does this
+class do for me? Likewise, for a function as well.
+
+Don't focus on has it been initialized properly or has been set to
+the right value. Instead focus on an action, a behavior, an outcome
+that is useful from the user point of view and drive your test
+and the design outside in.
+
+Let the test fail first.
+Then write minimum code to make the test pass.
+Then refactor to make it better.
+
+Red-Green-Refactor
+
+Tests should be extremely small and focused narrowly on none thing.
+
+A test should tell a story of what it is helping us to design.
+
+Make tests extremely clear and do not overly optimize tests to the point
+we have no clue that it does.
+
+Readability of tests is very important
+
+AAA
+Design your tests into three parts:
+
+Arrange
+Act
+Assert
+
+Arrange - minimally set up things we need for the test to run
+Act - perform the action that is the central focus of this test
+Assert - verify that the code does what you expect it to do
+
+Please use a blank line between the three AAA parts.
+Helps us to quickly see the parts of a test and the focus of it as well.
+
+Do not give cryptic names for the tests, but not overly long names
+either.
+
+Do not write test1, test2, etc.
+
