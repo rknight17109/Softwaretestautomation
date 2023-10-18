@@ -1,0 +1,29 @@
+1. How is TDD practiced in your current projects?
+
+Tests are written after code. Some tests are unit tests, some tests include Web, DB, messaging, etc. using Spring framework's testing support.
+
+Unfortunately after code.
+
+Unit test after coding
+
+After coding
+
+As we are coding
+
+Test first
+
+No 100% coverage
+
+System admin - writing tests after the script.
+
+
+2. How is it working for you?
+
+3. How is it working for the team?
+
+4. What are some of the impediments?
+
+5. What percentage of testing is automated?
+
+6. What are some of the places for improvements related to TDD and automation?
+
