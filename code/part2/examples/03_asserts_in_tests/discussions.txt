@@ -1,0 +1,19 @@
+Can a unit test have multiple asserts?
+
+A good unit test should not have any independent asserts.
+
+For example:
+we have a function that changes a persons full name.
+We can assert change to their first and change to their last name.
+Two asserts but those are dependent on the action being performed.
+
+If we have a test that calls two actions and is followed by two
+asserts - that is a no-no. Failure of one will hid the other.
+
+Exception, if we can keep the test concise *and* make sure both the
+asserts will run even in case of failure of one. This for example,
+can be done using assertAll that is part of junit 5. Use this
+sparing, however.
+
+
+
