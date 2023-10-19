@@ -1,0 +1,18 @@
+Jot down the tests that comes to mind on a piece of paper or a napkin:
+
+Tests:
+✓canary test
+✓verify correct moves are made - the design took care of this
+✓place first peg
+✓place second peg only after the first peg is placed
+✓place the third peg
+✓verify player does not play out of turn - design took care of this
+xgrid size is 3x3 - focus on state, better to focus on actions or behavior
+-game won by row match
+-game won by column match
+-game won by diagonal match
+-game not won upon game start
+-game is a draw
+✓do not allow peg to be place on top of another peg
+✓how many moves so far - YAGNI
+-...

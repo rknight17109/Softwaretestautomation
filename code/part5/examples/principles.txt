@@ -1,0 +1,11 @@
+Principles that we may use:
+-YAGNI - You Aren't Gonna Need It
+-think of extensibility
+-program with intent
+-think of true abstractions from the domain
+-keep code minimalistic
+-keep code simple
+-Keep it DRY, but do not overly optimize in tests
+-follow the last responsible moment principle. Defer code until
+you no longer can postpone.
+-Apply the SLAP - Single Level of Abstraction Principle

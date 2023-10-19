@@ -1,0 +1,41 @@
+We are going to build the game of tic-tac-toe.
+
+We have two players. One player can place a peg X, the other can place a peg O. One player can start, the other one can follow. They take turns to play.
+
+The object of the game is for one player to place all of their peg in a row, a column, or in a line diagonally.
+
+How do we start?
+
+First start with a strategic design before getting into the
+tactical design.
+
+Let us come up with an intial strategic design.
+
+Stratgic design is a high level initial design, not set
+on stone, but gives us a starting point:
+Grid
+Pegs
+Rules
+Player
+
+We want to separate the GUI from the logic.
+
+We may want to start with the logic and then think of slapping
+on a GUI on top of that.
+
+Pick any of the abstractions from the strategic design. You may
+pick what is the most interesting and the most valuable. Eliminate as a starting point those that do not provide a lot of value.
+
+We can list the abstractions in the order of least to the most
+valuable and interesting:
+xPlayer
+xPegs
+xGrid
+✔Rules
+
+How to proceed:
+-maintain a tests list
+-think of principles to use
+-and practices to follow
+
+

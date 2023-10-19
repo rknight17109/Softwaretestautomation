@@ -1,0 +1,31 @@
+Practices to follow:
+-list the tests that come to your mind, do not deliberate over them at this time
+-start with the canary test as the first test to write
+-think of postive tests
+-think of negative tests
+-think of exception tests
+-a good design may eliminate the need for some tests (by eliminating some possible actions or conditions)
+-you don't have to implement the tests in the same sequence you listed them
+-pick a test that is useful and also quick to implement
+-when writing tests, focus on behavior or action instead of state
+-think about what the abstraction does than what it has
+-let the state fall in palce to provide a behavior rather than be self-serving
+-as you work with tests, remember to add more tests to the list as they come to mind
+-if a test will take more effort, postpone it as other tests may pave the way for that to be implemented more easily later
+-when you write a test, pause, think, stare at, and ask "how does this feel", simple or complicated
+-write absolutely minimum code needed at this time for the current test(s) to pass
+-We have been told that we should focus on interface and then on implementation. Then why are we focusing on the implementation first? Don't.
+-let the first few tests help to design the skin of a function and the later tests help us to design the guts of a function.
+we can design this outside in. Focus on what the name of the function should be, its parameters, its return type, etc. Once we have that in place, the interface, we can then focus on what comes inside the function.
+-do not write anything until a test demands its presence. If you do not need it for any current tests to pass, do not write it. Or if you have it, delete it.
+-avoid jumping into design patterns. They are often misused and lead to more complicated design, sadly. Patterns should emerge in code rather than be force in. They are much better communication tool than a design tool.
+-let a test fail before you write minimum code to make it pass
+-if a test passes as soon as it is written, examine to be sure the test is actually correct
+-when tests pass, do not walk away, instead, take a look for improvements and refactor.
+-to understand what a function does, if we have to read every detail, that increases the cognitive load. Use the SLAP to reduce complexity in functions
+-Please use AAA - Arrange, Act, Assert and a blank line between those
+-make sure that tests are FAIR
+ Fast
+ Automated
+ Isolated
+ Repeatable
