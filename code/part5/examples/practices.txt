@@ -29,3 +29,19 @@ we can design this outside in. Focus on what the name of the function should be,
  Automated
  Isolated
  Repeatable
+
+-do not write code before writing a test for it
+-do not write a test until all existing tests pass
+-follow a rhythm
+  one test
+  minium code
+  refactor
+  one test
+  minium code
+  refactor
+
+  You want to allow a test to drive the design and then
+  another test to evolve the design base on what we have
+  learned so far by designing. If we write a pile of tests
+  we deprive our learning from evolving the design.
+
